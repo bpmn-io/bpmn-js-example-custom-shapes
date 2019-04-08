@@ -1,13 +1,13 @@
+> :warning: Should custom elements be serialized within the BPMN 2.0 diagram? If that is the case, this example is not what you are looking for. Checkout our [:notebook: custom elements guide](https://github.com/bpmn-io/bpmn-js-examples/tree/master/custom-elements) to learn how to build custom elements in a BPMN 2.0 compatible way.
+
+
 # bpmn-js example: Custom Shapes
 
-An example of creating custom shapes and connections for [bpmn-js](https://github.com/bpmn-io/bpmn-js). Custom shapes and connections allow you to create new shapes that are __not part of BPMN 2.0__. If you want to create custom elements that are BPMN 2.0 compatible check out our [custom elements example](https://github.com/bpmn-io/bpmn-js-examples/tree/master/custom-elements).
-
-:notebook: For more examples of customizing elements head over to our examples [bpmn-js-examples](https://github.com/bpmn-io/bpmn-js-examples/tree/master/custom-elements).
-
+This advanced example shows how to extend [bpmn-js](https://github.com/bpmn-io/bpmn-js) with new shapes and connections that are __not part of the BPMN 2.0 diagram / incompatible with the BPMN 2.0 standard__. Consult our [:notebook: custom elements guide](https://github.com/bpmn-io/bpmn-js-examples/tree/master/custom-elements) to learn how to extend the toolkit in a BPMN 2.0 compliant way.
 
 ## About
 
-This example creates a custom BPMN modeler that can display and add custom shapes and connections to BPMN 2.0 diagrams.
+This example extends [bpmn-js](https://github.com/bpmn-io/bpmn-js), creating a custom BPMN modeler that can display and add custom shapes and connections to BPMN 2.0 diagrams.
 
 The renderer ships with custom rules that define which modeling operations are possible on custom shapes and connections.
 It can import custom shapes and connections from a [JSON](http://json.org/) descriptor and updates their properties during modeling.
