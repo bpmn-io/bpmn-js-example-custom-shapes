@@ -49,12 +49,12 @@ customModeler.getCustomElements(); // all currently existing custom elements
 The modeler ships with a [module](https://github.com/bpmn-io/bpmn-js-examples/blob/master/custom-elements/app/custom-modeler/custom/index.js) that provides the following [bpmn-js](https://github.com/bpmn-io/bpmn-js) extensions:
 
 * [`CustomContextPadProvider`](app/custom-modeler/custom/CustomContextPadProvider.js): A custom context pad that allows you to connect custom elements to BPMN elements
-* [`CustomElementFactory`](https://github.com/bpmn-io/bpmn-js-examples/blob/master/custom-elements/app/custom-modeler/custom/CustomElementFactory.js): A factory that knows about how to create BPMN and custom shapes
-* [`CustomOrderingProvider`](https://github.com/bpmn-io/bpmn-js-examples/blob/master/custom-elements/app/custom-modeler/custom/CustomOrderingProvider.js): A provider that ensures custom connections are always rendered on top
-* [`CustomPalette`](https://github.com/bpmn-io/bpmn-js-examples/blob/master/custom-elements/app/custom-modeler/custom/CustomPalette.js): A custom palette that allows you to create custom elements
-* [`CustomRenderer`](https://github.com/bpmn-io/bpmn-js-examples/blob/master/custom-elements/app/custom-modeler/custom/CustomRenderer.js): A renderer that knows how to draw custom elements
-* [`CustomRules`](https://github.com/bpmn-io/bpmn-js-examples/blob/master/custom-elements/app/custom-modeler/custom/CustomRules.js): A rule provider that defines the allowed interaction with custom elements
-* [`CustomUpdater`](https://github.com/bpmn-io/bpmn-js-examples/blob/master/custom-elements/app/custom-modeler/custom/CustomUpdater.js): An updater that updates business data while the user interacts with the diagram
+* [`CustomElementFactory`](app/custom-modeler/custom/CustomElementFactory.js): A factory that knows about how to create BPMN and custom shapes
+* [`CustomOrderingProvider`](app/custom-modeler/custom/CustomOrderingProvider.js): A provider that ensures custom connections are always rendered on top
+* [`CustomPalette`](app/custom-modeler/custom/CustomPalette.js): A custom palette that allows you to create custom elements
+* [`CustomRenderer`](app/custom-modeler/custom/CustomRenderer.js): A renderer that knows how to draw custom elements
+* [`CustomRules`](app/custom-modeler/custom/CustomRules.js): A rule provider that defines the allowed interaction with custom elements
+* [`CustomUpdater`](app/custom-modeler/custom/CustomUpdater.js): An updater that updates business data while the user interacts with the diagram
 
 
 ## Run this Example
