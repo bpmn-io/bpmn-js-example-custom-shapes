@@ -17,7 +17,7 @@ It can import custom shapes and connections from a [JSON](http://json.org/) desc
 
 ## Usage Summary
 
-The example provides a [custom modeler](https://github.com/bpmn-io/bpmn-js-examples/blob/master/custom-elements/app/custom-modeler/index.js). After instantiation, the modeler allows you to add and get custom shapes and connections.
+The example provides a [custom modeler](app/custom-modeler/index.js). After instantiation, the modeler allows you to add and get custom shapes and connections.
 
 ```javascript
 // add custom elements
@@ -46,7 +46,7 @@ customModeler.addCustomElements(customElements);
 customModeler.getCustomElements(); // all currently existing custom elements
 ```
 
-The modeler ships with a [module](https://github.com/bpmn-io/bpmn-js-examples/blob/master/custom-elements/app/custom-modeler/custom/index.js) that provides the following [bpmn-js](https://github.com/bpmn-io/bpmn-js) extensions:
+The modeler ships with a [module](app/custom-modeler/custom/index.js) that provides the following [bpmn-js](https://github.com/bpmn-io/bpmn-js) extensions:
 
 * [`CustomContextPadProvider`](app/custom-modeler/custom/CustomContextPadProvider.js): A custom context pad that allows you to connect custom elements to BPMN elements
 * [`CustomElementFactory`](app/custom-modeler/custom/CustomElementFactory.js): A factory that knows about how to create BPMN and custom shapes
