@@ -8,6 +8,7 @@
     "url": "https://github.com/bpmn-io/bpmn-js-examples"
   },
   "scripts": {
+    "all": "run-s lint test build",
     "lint": "eslint .",
     "auto-test": "npm test -- --auto-watch --no-single-run",
     "test": "karma start",
