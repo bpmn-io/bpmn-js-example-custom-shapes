@@ -13,15 +13,12 @@ var modeler = new CustomModeler({
   }
 });
 
-modeler.importXML(pizzaDiagram, function(err) {
-
-  if (err) {
-    console.error('something went wrong:', err);
-  }
-
+modeler.importXML(pizzaDiagram).then(() => {
   modeler.get('canvas').zoom('fit-viewport');
 
   modeler.addCustomElements(customElements);
+}).catch(err => {
+  console.error('something went wrong:', err);
 });
 
 

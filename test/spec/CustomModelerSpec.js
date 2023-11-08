@@ -25,16 +25,10 @@ describe('custom modeler', function() {
     var modeler;
 
     // spin up modeler with custom element before each test
-    beforeEach(function(done) {
-
+    beforeEach(function() {
       modeler = new CustomModeler({ container: container });
 
-      modeler.importXML(diagramXML, function(err) {
-        if (!err) {
-          done();
-        }
-      });
-
+      return modeler.importXML(diagramXML);
     });
 
 
@@ -71,21 +65,18 @@ describe('custom modeler', function() {
     var modeler;
 
     // spin up modeler with custom element before each test
-    beforeEach(function(done) {
+    beforeEach(function() {
       modeler = new CustomModeler({ container: container });
 
-      modeler.importXML(diagramXML, function(err) {
-        if (!err) {
-          modeler.addCustomElements([ {
-            type: 'custom:triangle',
-            id: 'CustomTriangle_1',
-            x: 300,
-            y: 200
-          } ]);
-
-          done();
-        }
+      return modeler.importXML(diagramXML).then(() => {
+        modeler.addCustomElements([ {
+          type: 'custom:triangle',
+          id: 'CustomTriangle_1',
+          x: 300,
+          y: 200
+        } ]);
       });
+
     });
 
 

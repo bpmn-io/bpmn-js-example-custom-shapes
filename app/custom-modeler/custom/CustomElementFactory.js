@@ -2,7 +2,7 @@ import {
   assign
 } from 'min-dash';
 
-import inherits from 'inherits';
+import inherits from 'inherits-browser';
 
 import BpmnElementFactory from 'bpmn-js/lib/features/modeling/ElementFactory';
 import {
@@ -90,10 +90,10 @@ export default function CustomElementFactory(bpmnFactory, moddle) {
 
       // END minic ModdleElement API
 
-      return self.baseCreate(elementType, attrs);
+      return self._baseCreate(elementType, attrs);
     }
 
-    return self.createBpmnElement(elementType, attrs);
+    return this.createElement(elementType, attrs);
   };
 }
 
