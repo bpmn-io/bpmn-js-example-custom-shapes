@@ -57,25 +57,19 @@ The modeler ships with a [module](app/custom-modeler/custom/index.js) that provi
 * [`CustomUpdater`](app/custom-modeler/custom/CustomUpdater.js): An updater that updates business data while the user interacts with the diagram
 
 
-## Run this Example
-
-Fetch dependencies:
+## Build and Run
 
 ```
+# install dependencies
 npm install
-```
 
-Build example and open in your browser:
-
-```
+# spin up development mode
 npm run dev
-```
 
-Run tests:
-
-```
+# execute tests
 npm test
 ```
+
 
 ## License
 
