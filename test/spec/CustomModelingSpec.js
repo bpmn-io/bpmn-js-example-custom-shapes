@@ -9,12 +9,12 @@ import {
 
 import CustomModeler from '../../app/custom-modeler';
 
+import diagramXML from './diagram.bpmn';
+
 
 describe('custom modeling', function() {
 
-  var xml = require('./diagram.bpmn');
-
-  beforeEach(bootstrapBpmnJS(CustomModeler, xml));
+  beforeEach(bootstrapBpmnJS(CustomModeler, diagramXML));
 
 
   describe('custom elements', function() {

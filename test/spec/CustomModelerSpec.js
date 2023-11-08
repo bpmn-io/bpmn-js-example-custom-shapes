@@ -8,10 +8,10 @@ import {
   is
 } from 'bpmn-js/lib/util/ModelUtil';
 
+import diagramXML from './diagram.bpmn';
+
 
 describe('custom modeler', function() {
-
-  var xml = require('./diagram.bpmn');
 
   var container;
 
@@ -29,7 +29,7 @@ describe('custom modeler', function() {
 
       modeler = new CustomModeler({ container: container });
 
-      modeler.importXML(xml, function(err) {
+      modeler.importXML(diagramXML, function(err) {
         if (!err) {
           done();
         }
@@ -74,7 +74,7 @@ describe('custom modeler', function() {
     beforeEach(function(done) {
       modeler = new CustomModeler({ container: container });
 
-      modeler.importXML(xml, function(err) {
+      modeler.importXML(diagramXML, function(err) {
         if (!err) {
           modeler.addCustomElements([{
             type: 'custom:triangle',

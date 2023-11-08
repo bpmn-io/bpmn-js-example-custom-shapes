@@ -1,62 +1,61 @@
 /* global process */
 
 // configures browsers to run test against
-// any of [ 'ChromeHeadless', 'Chrome', 'Firefox', 'IE', 'PhantomJS' ]
-var browsers =
-  (process.env.TEST_BROWSERS || 'PhantomJS')
-    .replace(/^\s+|\s+$/, '')
-    .split(/\s*,\s*/g)
-    .map(function(browser) {
-      if (browser === 'ChromeHeadless') {
-        process.env.CHROME_BIN = require('puppeteer').executablePath();
+// any of [ 'ChromeHeadless', 'Chrome', 'Firefox', 'Safari' ]
+var browsers = (process.env.TEST_BROWSERS || 'ChromeHeadless').split(',');
 
-        // workaround https://github.com/GoogleChrome/puppeteer/issues/290
-        if (process.platform === 'linux') {
-          return 'ChromeHeadless_Linux';
-        }
-      } else {
-        return browser;
-      }
-    });
+// use puppeteer provided Chrome for testing
+process.env.CHROME_BIN = require('puppeteer').executablePath();
 
 
 module.exports = function(karma) {
   karma.set({
 
-    frameworks: [ 'browserify', 'mocha', 'chai' ],
+    frameworks: [
+      'mocha',
+      'chai',
+      'webpack'
+    ],
 
     files: [
       'test/spec/**/*Spec.js'
     ],
 
-    reporters: [ 'spec' ],
-
     preprocessors: {
-      'test/spec/**/*Spec.js': [ 'browserify' ]
+      'test/spec/**/*Spec.js': [ 'webpack' ]
     },
 
-    browsers: browsers,
+    reporters: [ 'progress' ],
+
+    browsers,
 
     browserNoActivityTimeout: 30000,
 
     singleRun: true,
     autoWatch: false,
 
-    // browserify configuration
-    browserify: {
-      debug: true,
-      transform: [
-        [ 'stringify', {
-          global: true,
-          extensions: [
-            '.bpmn',
-            '.css'
-          ]
-        } ],
-        [ 'babelify', {
-          global: true
-        } ]
-      ]
+    webpack: {
+      mode: 'development',
+      module: {
+        rules: [
+          {
+            test: require.resolve('./test/TestHelper.js'),
+            sideEffects: true
+          },
+          {
+            test: /\.css|\.bpmn$/,
+            type: 'asset/source'
+          }
+        ]
+      },
+      resolve: {
+        mainFields: [
+          'dev:module',
+          'module',
+          'main'
+        ]
+      },
+      devtool: 'eval-source-map'
     }
   });
 };
