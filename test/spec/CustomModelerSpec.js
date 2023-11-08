@@ -76,12 +76,12 @@ describe('custom modeler', function() {
 
       modeler.importXML(diagramXML, function(err) {
         if (!err) {
-          modeler.addCustomElements([{
+          modeler.addCustomElements([ {
             type: 'custom:triangle',
             id: 'CustomTriangle_1',
             x: 300,
             y: 200
-          }]);
+          } ]);
 
           done();
         }

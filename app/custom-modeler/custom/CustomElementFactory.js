@@ -63,6 +63,7 @@ export default function CustomElementFactory(bpmnFactory, moddle) {
       }
 
       if (!('$instanceOf' in attrs.businessObject)) {
+
         // ensures we can use ModelUtil#is for type checks
         Object.defineProperty(attrs.businessObject, '$instanceOf', {
           value: function(type) {
