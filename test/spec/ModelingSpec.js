@@ -5,14 +5,14 @@ import {
 
 import CustomModeler from '../../app/custom-modeler';
 
+import diagramXML from './Modeling.collaboration.bpmn';
+
 
 describe('modeling', function() {
 
   describe('collaboration', function() {
 
-    var xml = require('./Modeling.collaboration.bpmn');
-
-    beforeEach(bootstrapBpmnJS(CustomModeler, xml));
+    beforeEach(bootstrapBpmnJS(CustomModeler, diagramXML));
 
 
     describe('removing participants', function() {
