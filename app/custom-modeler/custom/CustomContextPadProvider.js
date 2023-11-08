@@ -1,4 +1,4 @@
-import inherits from 'inherits';
+import inherits from 'inherits-browser';
 
 import ContextPadProvider from 'bpmn-js/lib/features/context-pad/ContextPadProvider';
 
