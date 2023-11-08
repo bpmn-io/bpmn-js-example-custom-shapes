@@ -3,6 +3,8 @@
 
 # bpmn-js example: Custom Shapes
 
+[![CI](https://github.com/bpmn-io/bpmn-js-example-custom-shapes/actions/workflows/CI.yml/badge.svg)](https://github.com/bpmn-io/bpmn-js-example-custom-shapes/actions/workflows/CI.yml)
+
 This advanced example shows how to extend [bpmn-js](https://github.com/bpmn-io/bpmn-js) with new shapes and connections that are __not part of the BPMN 2.0 diagram / incompatible with the BPMN 2.0 standard__. Consult our [:notebook: custom elements guide](https://github.com/bpmn-io/bpmn-js-examples/tree/master/custom-elements) to learn how to extend the toolkit in a BPMN 2.0 compliant way.
 
 ## About
