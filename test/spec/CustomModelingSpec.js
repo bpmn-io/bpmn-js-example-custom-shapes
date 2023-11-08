@@ -205,12 +205,12 @@ describe('custom modeling', function() {
         type: 'custom:connection'
       });
 
-      bpmnjs.addCustomElements([{
+      bpmnjs.addCustomElements([ {
         type: 'custom:circle',
         id: 'CustomCircle_1',
         x: 200,
         y: 300
-      }]);
+      } ]);
 
       var customCircle = elementRegistry.get('CustomCircle_1');
 

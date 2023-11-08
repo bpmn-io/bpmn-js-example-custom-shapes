@@ -108,6 +108,7 @@ CustomRules.prototype.init = function() {
     var shape = context.shape;
 
     if (isCustom(shape)) {
+
       // cannot resize custom elements
       return false;
     }

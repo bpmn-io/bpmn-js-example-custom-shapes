@@ -136,7 +136,7 @@ inherits(CustomUpdater, CommandInterceptor);
 CustomUpdater.$inject = [ 'eventBus', 'modeling', 'bpmnjs' ];
 
 
-/////// helpers ///////////////////////////////////
+// helpers ///////////////////////////////////
 
 function copyWaypoints(connection) {
   return connection.waypoints.map(function(p) {
