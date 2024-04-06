@@ -34,7 +34,7 @@
   "devDependencies": {
     "chai": "^4.3.10",
     "copy-webpack-plugin": "^12.0.0",
-    "eslint": "^8.53.0",
+    "eslint": "^9.0.0",
     "eslint-plugin-bpmn-io": "^1.0.0",
     "karma": "^6.4.2",
     "karma-chai": "^0.1.0",
