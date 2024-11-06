@@ -7,10 +7,7 @@ import customElements from './custom-elements.json';
 import CustomModeler from './custom-modeler';
 
 var modeler = new CustomModeler({
-  container: '#canvas',
-  keyboard: {
-    bindTo: document
-  }
+  container: '#canvas'
 });
 
 modeler.importXML(pizzaDiagram).then(() => {
