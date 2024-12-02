@@ -32,7 +32,7 @@
   ],
   "license": "MIT",
   "devDependencies": {
-    "chai": "^4.3.10",
+    "chai": "^5.0.0",
     "copy-webpack-plugin": "^12.0.0",
     "eslint": "^9.12.0",
     "eslint-plugin-bpmn-io": "^2.0.2",
@@ -42,7 +42,7 @@
     "karma-firefox-launcher": "^2.1.2",
     "karma-mocha": "^2.0.1",
     "karma-webpack": "^5.0.0",
-    "mocha": "^10.2.0",
+    "mocha": "^11.0.0",
     "mocha-test-container-support": "^0.2.0",
     "npm-run-all2": "^7.0.0",
     "puppeteer": "^23.0.0",
