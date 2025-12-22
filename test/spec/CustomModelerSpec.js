@@ -2,6 +2,8 @@ import '../TestHelper';
 
 import TestContainer from 'mocha-test-container-support';
 
+import { expect } from 'chai';
+
 import CustomModeler from '../../app/custom-modeler';
 
 import {

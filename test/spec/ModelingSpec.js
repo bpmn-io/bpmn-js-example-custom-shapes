@@ -3,6 +3,8 @@ import {
   inject
 } from '../TestHelper';
 
+import { expect } from 'chai';
+
 import CustomModeler from '../../app/custom-modeler';
 
 import diagramXML from './Modeling.collaboration.bpmn';
