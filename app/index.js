@@ -1,5 +1,3 @@
-/* eslint-env browser */
-
 import pizzaDiagram from '../resources/pizza-collaboration.bpmn';
 
 import customElements from './custom-elements.json';
