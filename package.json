@@ -33,7 +33,7 @@
   "license": "MIT",
   "devDependencies": {
     "chai": "^6.2.2",
-    "copy-webpack-plugin": "^13.0.1",
+    "copy-webpack-plugin": "^14.0.0",
     "eslint": "^9.39.2",
     "eslint-plugin-bpmn-io": "^2.2.0",
     "karma": "^6.4.4",
